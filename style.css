@@ -1,5 +1,38 @@
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
 header {
+  position: absolute;
+  top: 0;
   height: 68px;
+  width: 100%;
+  animation: fadeIn 7s ease 0s 1 normal;
+  -webkit-animation: fadeIn 7s ease 0s 1 normal; 
+}
+
+@keyframes fadeIn { 
+  0% {
+    opacity: 0
+  } 
+  50% {
+    opacity: 0
+  } 
+  100% {
+    opacity: 1
+  } 
+} 
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  } 
+  50% {
+    opacity: 0
+  } 
+  100% {
+    opacity: 1
+  } 
 }
 
 header .logo {
@@ -44,10 +77,10 @@ header button.menu .panel {
   top: 50px;
   right: 56px;
   width: 114px;
-  -webkit-animation:panel 2s ease-in-out infinite alternate;
-  animation:panel 2s ease-in-out infinite alternate;
-  -webkit-transform-origin:center top;
-  transform-origin:center top;
+  -webkit-animation: panel 2s ease-in-out infinite alternate;
+  animation: panel 2s ease-in-out infinite alternate;
+  -webkit-transform-origin: center top;
+  transform-origin: center top;
 }
 
 @-webkit-keyframes panel {
@@ -77,6 +110,7 @@ header .component {
   right: -20px;
   width: 200px;
   list-style: none;
+  z-index: 1;
 }
 
 header li {
@@ -91,19 +125,19 @@ header li {
 }
 
 header li:first-of-type {
-  background: #ff6921;
+  background: #ff8d56;
 }
 
 header li:nth-of-type(2) {
-  background: #af73af;
+  background: #c591c5;
 }
 
 header li:nth-of-type(3) {
-  background: #45bdbd;
+  background: #50caca;
 }
 
 header li:nth-of-type(4) {
-  background: #efdd0c;
+  background: #eae068;
 }
 
 header .component.open li {
@@ -142,27 +176,27 @@ header .component.open li:nth-of-type(4) {
   }
 }
 
-header .component.close li {
+header .component.close.second li {
   animation: slideInClose 1s forwards;
 }
 
-header .component.close li:first-of-type {
+header .component.close.second li:first-of-type {
   animation-duration: 1s;
 }
 
-header .component.close li:nth-of-type(1) {
+header .component.close.second li:nth-of-type(1) {
   animation-duration: .8s;
 }
 
-header .component.close li:nth-of-type(2) {
+header .component.close.second li:nth-of-type(2) {
   animation-duration: .6s;
 }
 
-header .component.close li:nth-of-type(3) {
+header .component.close.second li:nth-of-type(3) {
   animation-duration: .4s;
 }
 
-header .component.close li:nth-of-type(4) {
+header .component.close.second li:nth-of-type(4) {
   animation-duration: .2s;
 }
 
@@ -193,4 +227,30 @@ header li:hover a {
   color: #3a0d0d;
   text-decoration: none;
   font-weight: bold;
+}
+
+#top  {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;;
+}
+
+#top .mask {
+  width: 100%;
+  margin: 0 auto;
+  height: 113px;
+  fill: none;
+  stroke: #fff;
+}
+
+#top h3 {
+  color: #325892;
+  animation: fadeIn 7s ease 0s 1 normal;
+  -webkit-animation: fadeIn 7s ease 0s 1 normal;
+  float: right;
+  margin-top: 18px;
+  font-size: 32px;
+
 }

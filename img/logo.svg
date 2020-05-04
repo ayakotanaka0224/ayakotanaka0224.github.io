@@ -1,12 +1,12 @@
 <svg width="82" height="24" viewBox="0 0 82 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="72" cy="13" r="8.5" fill="#3FC0DD" stroke="black"/>
+<rect x="0.5" y="3.5" width="81" height="19" fill="white" stroke="black"/>
+<circle cx="72" cy="13" r="8.5" fill="#3AB9D5" fill-opacity="0.83" stroke="black"/>
 <line x1="46.5" y1="4" x2="46.5" y2="22" stroke="black"/>
 <path d="M46 13L63.25 3.47372V22.5263L46 13Z" fill="black"/>
 <circle cx="38" cy="13" r="8.5" fill="#FFEE58" stroke="black"/>
 <line x1="46.5" y1="12" x2="46.5" y2="22" stroke="black"/>
 <path d="M24 15L14.4737 3.75L33.5263 3.75L24 15Z" fill="black"/>
 <path d="M24 22.5V9.5" stroke="black"/>
-<circle cx="10" cy="13" r="8.5" fill="#ED7200" stroke="black"/>
+<circle cx="10" cy="13" r="8.5" fill="#ED7200" fill-opacity="0.83" stroke="black"/>
 <line x1="18.5" y1="12" x2="18.5" y2="22" stroke="black"/>
-<rect x="0.5" y="3.5" width="81" height="19" stroke="black"/>
 </svg>
