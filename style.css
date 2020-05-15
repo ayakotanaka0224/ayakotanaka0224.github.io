@@ -1,45 +1,62 @@
+/* common---> */
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Quicksand', 'M PLUS Rounded 1c', sans-serif;
 }
 
+main > section:not(#top) {
+  padding: 30px 0;
+  margin: 48px 0;
+  color: #16407d;
+}
+
+main > section a {
+  font-weight: bold;
+  color: #16407d;
+}
+
+main > section a:hover {
+  color: blue;
+  text-decoration: none;
+}
+/* <---common */
+
+/* header---> */
 header {
   position: absolute;
   top: 0;
   height: 68px;
   width: 100%;
-  animation: fadeIn 7s ease 0s 1 normal;
-  -webkit-animation: fadeIn 7s ease 0s 1 normal; 
+  animation: fadeIn 7s ease-in 0s 1 normal;
+  -webkit-animation: fadeIn 7s ease-in 0s 1 normal; 
 }
 
 @keyframes fadeIn { 
   0% {
-    opacity: 0
+    opacity: 0;
   } 
   50% {
-    opacity: 0
+    opacity: 0;
   } 
   100% {
-    opacity: 1
+    opacity: 1;
   } 
 } 
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity: 0
+    opacity: 0;
   } 
   50% {
-    opacity: 0
+    opacity: 0;
   } 
   100% {
-    opacity: 1
+    opacity: 1;
   } 
 }
 
 header .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 6px;
+  display: inline-block;
+  padding: 12px;
   margin-left: 8px;
 }
 
@@ -47,10 +64,16 @@ header .logo img {
   width: 150px;
 }
 
-header button.menu {
+.menu-wrapper {
+  display: inline-block;
   position: fixed;
-  top: 38px;
-  right: 46px;
+  top: 40px;
+  right: 24px;
+  animation: fadeIn 7.5s ease-in 0s 1 normal;
+  -webkit-animation: fadeIn 7.5s ease-in 0s 1 normal;
+}
+
+.menu-wrapper button.menu {
   width: 115px;
   height: 95px;
   padding: .25rem .75rem;
@@ -60,60 +83,60 @@ header button.menu {
   background: transparent;
 }
 
-header button.menu::before {
+.menu-wrapper button.menu::before {
   content: '';
-  position: absolute;
-  top: -45px;
-  right: -62px;
   width: 213px;
   height: 55px;
   background-image: url(./img/header_bar.svg);
   background-size: contain;
   background-repeat: no-repeat;
+  position: absolute;
+  top: -30px;
+  right: -30px;
 }
 
-header button.menu .panel {
-  position: fixed;
-  top: 50px;
-  right: 56px;
+.menu-wrapper button.menu .panel {
   width: 114px;
   -webkit-animation: panel 2s ease-in-out infinite alternate;
   animation: panel 2s ease-in-out infinite alternate;
   -webkit-transform-origin: center top;
   transform-origin: center top;
+  position: absolute;
+  top: 16px;
+  right: 32px;
 }
 
 @-webkit-keyframes panel {
   0% {
    -webkit-transform:rotate(20deg);
-   transform:rotate(20deg)
+   transform:rotate(20deg);
   }
   100% {
    -webkit-transform:rotate(-20deg);
-   transform:rotate(-20deg)
+   transform:rotate(-20deg);
   }
 }
 @keyframes panel {
   0% {
   -webkit-transform:rotate(20deg);
-  transform:rotate(20deg)
+  transform:rotate(20deg);
   }
   100% {
   -webkit-transform:rotate(-20deg);
-  transform:rotate(-20deg)
+  transform:rotate(-20deg);
   }
 }
 
-header .component {
+.menu-wrapper .component {
   position: absolute;
-  top: 150px;
-  right: -20px;
+  top: 140px;
+  right: -44px;
   width: 200px;
   list-style: none;
   z-index: 1;
 }
 
-header li {
+.menu-wrapper li {
   opacity: 0;
   padding: 4px;
   margin: 12px 0;
@@ -124,43 +147,43 @@ header li {
   transition: .4s;
 }
 
-header li:first-of-type {
+.menu-wrapper li:first-of-type {
   background: #ff8d56;
 }
 
-header li:nth-of-type(2) {
+.menu-wrapper li:nth-of-type(2) {
   background: #c591c5;
 }
 
-header li:nth-of-type(3) {
+.menu-wrapper li:nth-of-type(3) {
   background: #50caca;
 }
 
-header li:nth-of-type(4) {
+.menu-wrapper li:nth-of-type(4) {
   background: #eae068;
 }
 
-header .component.open li {
+.menu-wrapper .component.open li {
   animation: slideInOpen 1s forwards;
 }
 
-header .component.open li:first-of-type {
+.menu-wrapper .component.open li:first-of-type {
   animation-duration: 0s;
 }
 
-header .component.open li:nth-of-type(1) {
+.menu-wrapper .component.open li:nth-of-type(1) {
   animation-duration: .2s;
 }
 
-header .component.open li:nth-of-type(2) {
+.menu-wrapper .component.open li:nth-of-type(2) {
   animation-duration: .4s;
 }
 
-header .component.open li:nth-of-type(3) {
+.menu-wrapper .component.open li:nth-of-type(3) {
   animation-duration: .6s;
 }
 
-header .component.open li:nth-of-type(4) {
+.menu-wrapper .component.open li:nth-of-type(4) {
   animation-duration: .8s;
 }
 
@@ -176,27 +199,27 @@ header .component.open li:nth-of-type(4) {
   }
 }
 
-header .component.close.second li {
+.menu-wrapper .component.close.second li {
   animation: slideInClose 1s forwards;
 }
 
-header .component.close.second li:first-of-type {
+.menu-wrapper .component.close.second li:first-of-type {
   animation-duration: 1s;
 }
 
-header .component.close.second li:nth-of-type(1) {
+.menu-wrapper .component.close.second li:nth-of-type(1) {
   animation-duration: .8s;
 }
 
-header .component.close.second li:nth-of-type(2) {
+.menu-wrapper .component.close.second li:nth-of-type(2) {
   animation-duration: .6s;
 }
 
-header .component.close.second li:nth-of-type(3) {
+.menu-wrapper .component.close.second li:nth-of-type(3) {
   animation-duration: .4s;
 }
 
-header .component.close.second li:nth-of-type(4) {
+.menu-wrapper .component.close.second li:nth-of-type(4) {
   animation-duration: .2s;
 }
 
@@ -212,29 +235,33 @@ header .component.close.second li:nth-of-type(4) {
   }
 }
 
-header .component li:hover {
+.menu-wrapper .component li:hover {
   position: relative;
   right: 20px;
 }
 
-header li a {
+.menu-wrapper li a {
   font-size: 20px;
   color: #3a0d0d;
   transition: .4s;
 }
 
-header li:hover a {
+.menu-wrapper li:hover a {
+  font-weight: bold;
   color: #3a0d0d;
   text-decoration: none;
-  font-weight: bold;
 }
+/* <---header */
 
+/* top---> */
 #top  {
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;;
+  width: 100vw;
+  z-index: -1;
 }
 
 #top .mask {
@@ -246,11 +273,54 @@ header li:hover a {
 }
 
 #top h3 {
-  color: #325892;
-  animation: fadeIn 7s ease 0s 1 normal;
-  -webkit-animation: fadeIn 7s ease 0s 1 normal;
+  animation: fadeIn 8s ease-in 0s 1 normal;
+  -webkit-animation: fadeIn 8s ease-in 0s 1 normal;
   float: right;
   margin-top: 18px;
   font-size: 32px;
-
 }
+/* <---top */
+
+/* about---> */
+#about .title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#about .profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#about .profile img {
+  width: 280px;
+  border-radius: 50%;
+}
+
+#about .profile .content {
+  margin-left: 24px;
+  max-width: 324px;
+}
+
+#about .profile .content h3 {
+  margin-bottom: 24px;
+}
+
+#about .profile .content p {
+  letter-spacing: 1px;
+  line-height: 26px;
+}
+/* <---about */
+
+/* responsive---> */
+@media (max-width: 767px) {
+  #about .profile img {
+    margin-bottom: 20px;
+  }
+  #about .profile .content h3 {
+    text-align: center;
+  }
+}
+/* <--responsive */
