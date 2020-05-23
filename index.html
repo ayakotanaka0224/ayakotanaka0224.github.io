@@ -19,7 +19,7 @@
 
 <body>
   <header>
-    <a class="logo" href="#"><img src="./img/logo.svg" alt=""></a>
+    <a class="logo" href=""><img src="./img/logo.svg" alt=""></a>
   </header>
   <div class="menu-wrapper">
     <button class="menu" type="button">
@@ -27,13 +27,13 @@
     </button>
     <ul class="component">
       <li><a href="#about">about</a></li>
-      <li><a href="#">skills</a></li>
+      <li><a href="#skills">skills</a></li>
       <li><a href="#">works</a></li>
       <li><a href="#">contact</a></li>
     </ul>
   </div>
   <main>
-    <section id="top">
+    <section id="loading">
       <div class="container">
         <svg class="mask" viewBox="0 0 753 113" id="move">
           <defs>
@@ -82,8 +82,14 @@
           <image xlink:href="./img/base.svg" width="100%" height="100%" mask="url(#clipMask)">
           </image>
         </svg>
+      </div>
+    </section>
+    <section id="top">
+      <div class="container">
+        <img src="./img/base_top.svg" alt="Ayako Tanaka" class="sub-title">
         <h3>My Portfolio Site</h3>
       </div>
+      <img src="./img/curve.svg" alt="curve" class="curve">
     </section>
     <section id="about">
       <div class="container">
@@ -128,7 +134,7 @@
   </main>
   <footer></footer>
 
-  <script src="./header.js"></script>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -141,7 +147,9 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="./header.js"></script>
+  <script src="./js/header.js"></script>
+  <script src="./js/loading.js"></script>
+  <script src="./js/scroll.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
   <script>
     new Vivus('move', {
