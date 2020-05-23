@@ -4,8 +4,7 @@ body {
 }
 
 main > section:not(#top) {
-  padding: 30px 0;
-  margin: 48px 0;
+  padding: 120px 0;
   color: #16407d;
 }
 
@@ -15,8 +14,13 @@ main > section a {
 }
 
 main > section a:hover {
-  color: blue;
+  color: #16407d;
   text-decoration: none;
+}
+
+main > section:not(#top) .title {
+  text-align: center;
+  margin-bottom: 40px;
 }
 /* <---common */
 
@@ -284,11 +288,6 @@ header .logo img {
 /* <---top */
 
 /* about---> */
-#about .title {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
 #about .profile {
   display: flex;
   flex-wrap: wrap;
@@ -312,9 +311,47 @@ header .logo img {
 
 #about .profile .content p {
   letter-spacing: 1px;
-  line-height: 26px;
+  line-height: 29px;
+}
+
+#about .profile .content a {
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+}
+
+#about .profile .content a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: #16407d;
+  transition: .3s;
+}
+
+#about .profile .content a:hover::after {
+  width: 100%;
 }
 /* <---about */
+
+/* skills---> */
+#skills img {
+  height: 50px;
+  margin: 10px auto;
+  display: block;
+}
+
+#skills h3 {
+  text-align: center;
+}
+
+#skills p {
+  text-align: left;
+  margin: 20px;
+}
+/* <--skill */
 
 /* responsive---> */
 @media (max-width: 767px) {
