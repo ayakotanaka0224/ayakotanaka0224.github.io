@@ -8,6 +8,11 @@
   --blue_Blizzard: #94dded;
   --grey_Dark: #a3a3a3;
   --grey_Pure: #777;
+  --circle_Red: #f9a0a0;
+  --circle_Orange: #ffc691;
+  --circle_Light_Green: #cde786;
+  --circle_Green: #78d582;
+  --circle_Grey: #e4e4e4;
   --font_size_LL: 44px;
   --font_size_L: 24px;
   --font_size_M: 16px;
@@ -44,7 +49,7 @@ main > section:not(#top) .title:after {
   content: "";
   width: 350px;
   height: 2px;
-  background-color: #515151;
+  background-color: var(--black_Matterhorn);
   max-width: 40%;
 }
 /* <---common */
@@ -280,8 +285,8 @@ header .logo img {
   width: 100%;
   display: flex;
   align-items: center;
-  background: center / cover no-repeat url(./img/top.svg);
-  color: #515151;
+  background: center / cover no-repeat url(./img/bg/top.svg);
+  color: var(--black_Matterhorn);
   z-index: -1;
 }
 
@@ -304,7 +309,7 @@ header .logo img {
 
 /* about---> */
 #about {
-  background: 0% / cover no-repeat url(./img/about.svg);
+  background: 0% / cover no-repeat url(./img/bg/about.svg);
 }
 
 #about .profile {
@@ -336,7 +341,7 @@ header .logo img {
   content: "";
   height: 10px;
   width: calc(100% + 12px);
-  background: #ffe2c6;
+  background-color: #ffe2c6;
   position: absolute;
   z-index: -1;
   left: -6px;
@@ -352,7 +357,7 @@ header .logo img {
 
 /* skills---> */
 #skills {
-  background: 0% / cover no-repeat url(./img/skills.svg);
+  background: 0% / cover no-repeat url(./img/bg/skills.svg);
 }
 #skills .content-wrapper {
   display: flex;
@@ -382,91 +387,91 @@ header .logo img {
 #skills .circle[language="html"] {
   background-image: radial-gradient(var(--white) 60%, transparent 61%),
     conic-gradient(
-      #f9a0a0 0deg,
-      #ffc691 100deg,
-      #cde786 220deg,
-      #78d582 310deg,
-      #e4e4e4 310deg 360deg
+      var(--circle_Red) 0deg,
+      var(--circle_Orange) 100deg,
+      var(--circle_Light_Green) 220deg,
+      var(--circle_Green) 310deg,
+      var(--circle_Grey) 310deg 360deg
     );
 }
 #skills .circle[language="css"] {
   background-image: radial-gradient(var(--white) 60%, transparent 61%),
     conic-gradient(
-      #f9a0a0 0deg,
-      #ffc691 100deg,
-      #cde786 220deg,
-      #78d582 300deg,
-      #e4e4e4 300deg 360deg
+      var(--circle_Red) 0deg,
+      var(--circle_Orange) 100deg,
+      var(--circle_Light_Green) 220deg,
+      var(--circle_Green) 300deg,
+      var(--circle_Grey) 300deg 360deg
     );
 }
 #skills .circle[language="figma"] {
   background-image: radial-gradient(var(--white) 60%, transparent 61%),
     conic-gradient(
-      #f9a0a0 0deg,
-      #ffc691 100deg,
-      #cde786 220deg,
-      #78d582 310deg,
-      #e4e4e4 310deg 360deg
+      var(--circle_Red) 0deg,
+      var(--circle_Orange) 100deg,
+      var(--circle_Light_Green) 220deg,
+      var(--circle_Green) 310deg,
+      var(--circle_Grey) 310deg 360deg
     );
 }
 #skills .circle[language="js"] {
   background-image: radial-gradient(var(--white) 60%, transparent 61%),
     conic-gradient(
-      #f9a0a0 0deg,
-      #ffc691 100deg,
-      #cde786 180deg,
-      #78d582 180deg,
-      #e4e4e4 180deg 360deg
+      var(--circle_Red) 0deg,
+      var(--circle_Orange) 100deg,
+      var(--circle_Light_Green) 180deg,
+      var(--circle_Green) 180deg,
+      var(--circle_Grey) 180deg 360deg
     );
 }
 #skills .circle[language="php"] {
   background-image: radial-gradient(var(--white) 60%, transparent 61%),
     conic-gradient(
-      #f9a0a0 0deg,
-      #ffc691 100deg,
-      #cde786 160deg,
-      #78d582 160deg,
-      #e4e4e4 160deg 360deg
+      var(--circle_Red) 0deg,
+      var(--circle_Orange) 100deg,
+      var(--circle_Light_Green) 160deg,
+      var(--circle_Green) 160deg,
+      var(--circle_Grey) 160deg 360deg
     );
 }
 #skills .circle[language="wp"] {
   background-image: radial-gradient(var(--white) 60%, transparent 61%),
     conic-gradient(
-      #f9a0a0 0deg,
-      #ffc691 100deg,
-      #cde786 220deg,
-      #78d582 280deg,
-      #e4e4e4 280deg 360deg
+      var(--circle_Red) 0deg,
+      var(--circle_Orange) 100deg,
+      var(--circle_Light_Green) 220deg,
+      var(--circle_Green) 280deg,
+      var(--circle_Grey) 280deg 360deg
     );
 }
 #skills .circle[language="vue"] {
   background-image: radial-gradient(var(--white) 60%, transparent 61%),
     conic-gradient(
-      #f9a0a0 0deg,
-      #ffc691 60deg,
-      #cde786 60deg,
-      #78d582 60deg,
-      #e4e4e4 60deg 360deg
+      var(--circle_Red) 0deg,
+      var(--circle_Orange) 60deg,
+      var(--circle_Light_Green) 60deg,
+      var(--circle_Green) 60deg,
+      var(--circle_Grey) 60deg 360deg
     );
 }
 #skills .circle[language="react"] {
   background-image: radial-gradient(var(--white) 60%, transparent 61%),
     conic-gradient(
-      #f9a0a0 0deg,
-      #ffc691 60deg,
-      #cde786 160deg,
-      #78d582 200deg,
-      #e4e4e4 200deg 360deg
+      var(--circle_Red) 0deg,
+      var(--circle_Orange) 60deg,
+      var(--circle_Light_Green) 160deg,
+      var(--circle_Green) 200deg,
+      var(--circle_Grey) 200deg 360deg
     );
 }
 #skills .circle[language="ts"] {
   background-image: radial-gradient(var(--white) 60%, transparent 61%),
     conic-gradient(
-      #f9a0a0 0deg,
-      #ffc691 60deg,
-      #cde786 160deg,
-      #78d582 180deg,
-      #e4e4e4 180deg 360deg
+      var(--circle_Red) 0deg,
+      var(--circle_Orange) 60deg,
+      var(--circle_Light_Green) 160deg,
+      var(--circle_Green) 180deg,
+      var(--circle_Grey) 180deg 360deg
     );
 }
 #skills .circle img {
