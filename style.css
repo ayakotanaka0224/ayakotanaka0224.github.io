@@ -1,5 +1,6 @@
 /* common---> */
 :root {
+  --white: #fff;
   --black_Matterhorn: #515151;
   --violet_Mauve: #c99eff;
   --red_SweetPink: #ec8d8d;
@@ -64,7 +65,7 @@ header .logo {
 header .logo img {
   width: 150px;
   padding: 6px;
-  background: #fff;
+  background: var(--white);
   border-radius: 4px;
 }
 
@@ -145,7 +146,9 @@ header .logo img {
   border: 2px solid var(--black_Matterhorn);
   border-right: none;
   border-radius: 30px 0 0 30px;
-  transition: right 0.4s;
+  transition: right 0.2s;
+  position: relative;
+  cursor: pointer;
 }
 
 .menu-wrapper li:first-of-type {
@@ -226,9 +229,7 @@ header .logo img {
 }
 
 .menu-wrapper .component li:hover {
-  position: relative;
   right: 20px;
-  cursor: pointer;
 }
 
 .menu-wrapper li a {
@@ -254,7 +255,7 @@ header .logo img {
   justify-content: center;
   position: fixed;
   top: 0;
-  background-color: #fff;
+  background-color: var(--white);
   transition: height 1.5s ease-in;
   z-index: 100;
 }
@@ -264,7 +265,7 @@ header .logo img {
   margin: 0 auto;
   height: 113px;
   fill: none;
-  stroke: #fff;
+  stroke: var(--white);
 }
 
 #loading.loaded {
@@ -350,19 +351,135 @@ header .logo img {
 /* <---about */
 
 /* skills---> */
-#skills img {
-  height: 50px;
-  margin: 10px auto;
-  display: block;
+#skills {
+  background: 0% / cover no-repeat url(./img/skills.svg);
 }
-
-#skills h3 {
-  text-align: center;
+#skills .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-
-#skills p {
-  text-align: left;
-  margin: 20px;
+#skills .skill-circle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 100px;
+}
+#skills .skill {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 32px 36px;
+}
+#skills .circle {
+  position: relative;
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+}
+#skills .circle[language="html"] {
+  background-image: radial-gradient(var(--white) 60%, transparent 61%),
+    conic-gradient(
+      #f9a0a0 0deg,
+      #ffc691 100deg,
+      #cde786 220deg,
+      #78d582 310deg,
+      #e4e4e4 310deg 360deg
+    );
+}
+#skills .circle[language="css"] {
+  background-image: radial-gradient(var(--white) 60%, transparent 61%),
+    conic-gradient(
+      #f9a0a0 0deg,
+      #ffc691 100deg,
+      #cde786 220deg,
+      #78d582 300deg,
+      #e4e4e4 300deg 360deg
+    );
+}
+#skills .circle[language="figma"] {
+  background-image: radial-gradient(var(--white) 60%, transparent 61%),
+    conic-gradient(
+      #f9a0a0 0deg,
+      #ffc691 100deg,
+      #cde786 220deg,
+      #78d582 310deg,
+      #e4e4e4 310deg 360deg
+    );
+}
+#skills .circle[language="js"] {
+  background-image: radial-gradient(var(--white) 60%, transparent 61%),
+    conic-gradient(
+      #f9a0a0 0deg,
+      #ffc691 100deg,
+      #cde786 180deg,
+      #78d582 180deg,
+      #e4e4e4 180deg 360deg
+    );
+}
+#skills .circle[language="php"] {
+  background-image: radial-gradient(var(--white) 60%, transparent 61%),
+    conic-gradient(
+      #f9a0a0 0deg,
+      #ffc691 100deg,
+      #cde786 160deg,
+      #78d582 160deg,
+      #e4e4e4 160deg 360deg
+    );
+}
+#skills .circle[language="wp"] {
+  background-image: radial-gradient(var(--white) 60%, transparent 61%),
+    conic-gradient(
+      #f9a0a0 0deg,
+      #ffc691 100deg,
+      #cde786 220deg,
+      #78d582 280deg,
+      #e4e4e4 280deg 360deg
+    );
+}
+#skills .circle[language="vue"] {
+  background-image: radial-gradient(var(--white) 60%, transparent 61%),
+    conic-gradient(
+      #f9a0a0 0deg,
+      #ffc691 60deg,
+      #cde786 60deg,
+      #78d582 60deg,
+      #e4e4e4 60deg 360deg
+    );
+}
+#skills .circle[language="react"] {
+  background-image: radial-gradient(var(--white) 60%, transparent 61%),
+    conic-gradient(
+      #f9a0a0 0deg,
+      #ffc691 60deg,
+      #cde786 160deg,
+      #78d582 200deg,
+      #e4e4e4 200deg 360deg
+    );
+}
+#skills .circle[language="ts"] {
+  background-image: radial-gradient(var(--white) 60%, transparent 61%),
+    conic-gradient(
+      #f9a0a0 0deg,
+      #ffc691 60deg,
+      #cde786 160deg,
+      #78d582 180deg,
+      #e4e4e4 180deg 360deg
+    );
+}
+#skills .circle img {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  top: calc(50% - 40px);
+  right: calc(50% - 40px);
+}
+#skills span {
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: auto;
 }
 /* <--skill */
 
@@ -374,15 +491,6 @@ header .logo img {
   #about .profile .content h3 {
     text-align: center;
   }
-  #skills .row > * {
-    margin-bottom: 32px;
-  }
-
-  #skills p {
-    margin: 20px 68px;
-    position: relative;
-    z-index: -1;
-  }
 }
 
 @media (max-width: 538px) {
@@ -393,14 +501,6 @@ header .logo img {
   .menu-wrapper button.menu::before {
     width: 200px;
     top: -35px;
-  }
-  #top {
-    background: radial-gradient(
-      at 50% 100%,
-      #ffe6c1 16px,
-      #9abca4 45%,
-      #bee4ec 85%
-    );
   }
 }
 /* <--responsive */
